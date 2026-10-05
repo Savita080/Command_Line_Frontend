@@ -4,4 +4,8 @@ import { defineConfig } from 'vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  server: {
+    // Serve index.html for all unmatched routes (SPA fallback)
+    historyApiFallback: true,
+  },
 })
